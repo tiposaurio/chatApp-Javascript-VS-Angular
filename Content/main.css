@@ -1,0 +1,20 @@
+﻿body {
+    padding: 15px 15px 15px 10px;
+}
+
+#mainWindow, #mainWindow2 {
+    border: 2px dashed blue;
+    border-radius: 10px;
+    max-height: 400px;
+    min-height: 400px;
+    height: 400px;
+    overflow: auto;
+}
+
+.topTitle {
+    width: 100%;
+    margin: auto;
+    font-size: 30px;
+    align-content: center;
+    text-align: center;
+}

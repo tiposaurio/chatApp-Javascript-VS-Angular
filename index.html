@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/main.css" rel="stylesheet" />
+</head>
+<body ng-app="chatApp">
+    <div class="container-fluid">
+        <div class="row">
+            <div style="padding-top:12px; text-shadow: 2px 2px 0px #222222, 3px 3px 1px rgba(222, 216, 216, 0.39);font-size:xx-large;color:#428bca;text-align:center">
+                <i class="fa fa-weixin" style="color:#428bca; font-size:xx-large"></i>
+                Chat App <span style="color:black; font-size:x-large;">
+                    by <a href="http://urielzen.com" style="text-decoration:none">UC</a>
+                </span>
+            </div>
+            <div class="col-md-6">
+                <div class="topTitle">
+                    Pure Javascript Chat App
+                </div>
+                <div id="mainWindow">
+                    <div id="mainWindowInner" class="mainWindow"></div>
+                </div>
+                <input type="text" id="user" placeholder="Name" />
+                <input type="text" id="img" value="http://cdn1.theodysseyonline.com/files/2015/06/08/6356938644488566691013182599_grumpy-cat.jpg" placeholder="Url" />
+                <input type="text" onkeypress="chatApp.enterPressed(event)" class="form-control" id="message" placeholder="type message here" />
+                <div class="btn btn-success" onclick="chatApp.sendMsg()">
+                    <i class="fa fa-send"></i> Send
+                </div>
+                <div id="testTime"></div>
+            </div>
+            <div class="col-md-6">
+                <div class="topTitle">
+                    AngularJS Chat App
+                </div>
+                <ng-view></ng-view>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/jquery.mCustomScrollbar.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/main.js"></script>
+    <script src="Scripts/main2.js"></script>
+</body>
+</html>

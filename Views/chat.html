@@ -1,0 +1,20 @@
+﻿<div class="mainWindow2" id="mainWindow2">
+    <div ng-repeat="messageObj in messages | orderBy: 'date': false">
+        <img ng-src="{{messageObj.pic}}" height="40" width="60" />
+        {{messageObj.date | myDate}}
+        {{messageObj.user}} says...
+        <button ng-click="editMsg(messageObj.key)">Edit</button>
+        <button ng-click="deleteMsg(messageObj.key)">Delete</button><br />
+        {{messageObj.message}}
+        <br />
+        <br />
+
+    </div>
+</div>
+<input type="text" ng-model="name" placeholder="Name" />
+<input type="text" ng-model="url" placeholder="Url" /><br />
+<input type="text" ng-model="msg" ng-keypress="enterPressed($event)" placeholder="type message here" class="form-control" />
+
+<button class="btn btn-success" ng-click="sendMsg()">
+    <i class="fa fa-send"></i> Send
+</button>
